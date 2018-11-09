@@ -25,12 +25,12 @@
     },
     "autoload": {
         "psr-4": {
-            "\\": "src/"
+            "UCRM\\": "src/UCRM/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "\\": "tests/"
+            "UCRM\\": "tests/UCRM/"
         }
     }
 }
