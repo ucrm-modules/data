@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace MVQN\UCRM\Data\Models;
+namespace UCRM\Data\Models;
 
 use MVQN\Data\Database;
 
@@ -14,7 +14,7 @@ class OptionTests extends \PHPUnit\Framework\TestCase
 {
     protected function setUp()
     {
-        $env = new \Dotenv\Dotenv(__DIR__."/../../../../../");
+        $env = new \Dotenv\Dotenv(__DIR__ . "/../../../../data/");
         $env->load();
 
         Database::connect(
@@ -31,13 +31,28 @@ class OptionTests extends \PHPUnit\Framework\TestCase
     // DATABASE
     // -----------------------------------------------------------------------------------------------------------------
 
-    public function testDatabaseOption()
+    public function testOptionSelect()
     {
         $options = Option::select();
-        echo $options;
+        echo $options."\n";
+        $this->assertGreaterThan(0, count($options));
 
+        $options = $options->where("code", "MAILER_SENDER_ADDRESS");
+        echo $options."\n";
+        $this->assertCount(1, $options);
     }
 
+    public function testOptionWhere()
+    {
+        $options = Option::where("code", "=", "MAILER_SENDER_ADDRESS");
+        echo $options."\n";
+        $this->assertCount(1, $options);
+
+        $options = Option::where("optionId", "=", 19);
+        echo $options."\n";
+        $this->assertCount(1, $options);
+
+    }
 
 
 

@@ -1,29 +1,32 @@
 <?php
 declare(strict_types=1);
 
-namespace MVQN\UCRM\Data\Models;
+namespace UCRM\Data\Models;
 
 use MVQN\Data\Models\Model;
+use MVQN\Data\Annotations\TableNameAnnotation as TableName;
 use MVQN\Data\Annotations\ColumnNameAnnotation as ColumnName;
 
 /**
- * Class Option
+ * Class General
  *
  * @package MVQN\UCRM\Data
  * @author Ryan Spaeth <rspaeth@mvqn.net>
  * @final
  *
- * @method int|null getOptionId()
+ * @TableName general
+ *
+ * @method int|null getGeneralId()
  * @method string|null getCode()
  * @method string|null getValue()
  */
-final class Option extends Model
+final class General extends Model
 {
     /**
      * @var int
-     * @ColumnName option_id
+     * @ColumnName general_id
      */
-    protected $optionId;
+    protected $generalId;
 
     /**
      * @var string

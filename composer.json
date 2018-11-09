@@ -1,6 +1,6 @@
 {
-    "name": "mvqn-ucrm/data",
-    "description": "A simple database library for interacting with UCRM.",
+    "name": "ucrm-modules/data",
+    "description": "A simple library for interacting with the UCRM database.",
     "minimum-stability": "stable",
     "type": "library",
     "license": "MIT",
@@ -25,12 +25,12 @@
     },
     "autoload": {
         "psr-4": {
-            "MVQN\\": "src/MVQN/"
+            "\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "MVQN\\": "tests/MVQN/"
+            "\\": "tests/"
         }
     }
 }

@@ -1,5 +1,5 @@
-# mvqn/data
-A simple database library.
+# ucrm-modules/data
+A simple library for interacting with the UCRM database.
 
 &nbsp;
 ## Installation
@@ -29,18 +29,14 @@ COMING SOON
 ## About
 
 ### Requirements
-- mvqn/common
-- mvqn/annotations
-- mvqn/collections
-- mvqn/dynamics
-
-### Related Packages
-[mvqn-ucrm/data](https://github.com/mvqn-ucrm/data)
-
-Another plugin module used to simplify access to the UCRM REST API.
+- [mvqn/common](https://github.com/mvqn/common)
+- [mvqn/annotations](https://github.com/mvqn/annotations)
+- [mvqn/collections](https://github.com/mvqn/collections)
+- [mvqn/dynamics](https://github.com/mvqn/dynamics)
+- [mvqn/data](https://github.com/mvqn/data)
 
 ### Submitting bugs and feature requests
-Bugs and feature request are tracked on [Github](https://github.com/mvqn/data/issues)
+Bugs and feature request are tracked on [Github](issues)
 
 ### Author
 Ryan Spaeth <[rspaeth@mvqn.net](mailto:rspaeth@mvqn.net)>
