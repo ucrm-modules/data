@@ -6,11 +6,11 @@ namespace UCRM\Data\Models;
 use MVQN\Data\Database;
 
 /**
- * Class OptionTests
+ * Class UserTests
  *
  * @author Ryan Spaeth <rspaeth@mvqn.net>
  */
-class OptionTests extends \PHPUnit\Framework\TestCase
+class UserTests extends \PHPUnit\Framework\TestCase
 {
     protected function setUp()
     {
@@ -33,13 +33,15 @@ class OptionTests extends \PHPUnit\Framework\TestCase
 
     public function testOptionSelect()
     {
-        $options = Option::select();
-        echo $options."\n";
-        $this->assertGreaterThan(0, count($options));
+        $users = User::select();
+        echo $users."\n";
+        $this->assertGreaterThan(0, count($users));
 
-        $options = $options->where("code", "MAILER_SENDER_ADDRESS");
-        echo $options."\n";
-        $this->assertCount(1, $options);
+        /*
+        $users = $users->where("code", "MAILER_SENDER_ADDRESS");
+        echo $users."\n";
+        $this->assertCount(1, $users);
+        */
     }
 
     public function testOptionWhere()

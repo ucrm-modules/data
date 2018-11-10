@@ -14,7 +14,7 @@ class GeneralTests extends \PHPUnit\Framework\TestCase
 {
     protected function setUp()
     {
-        $env = new \Dotenv\Dotenv(__DIR__ . "/../../../../data/");
+        $env = new \Dotenv\Dotenv(__DIR__ . "/../../../../");
         $env->load();
 
         Database::connect(
